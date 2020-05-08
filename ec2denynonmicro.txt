@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1500228593000",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances"
+      ],
+      "Condition": {
+        "StringNotEquals": {
+          "ec2:InstanceType": [
+            "t2.micro",
+            "t2.small"
+          ]
+        }
+      },
+      "Resource": [
+        "arn:aws:ec2:*:156108990704:instance/*"
+      ]
+    }
+  ]
+}
+  ]
+}
