@@ -1,0 +1,16 @@
+User		Bucket		Final
+User A Allow	No policy	Access
+User A Allow	User B Allow	Access
+No policy	User A Allow	No Access
+User A Allow	User A Denied	No Access
+
+User 		Group		S3 Access
+Only EC2	Only EC2	Denied
+Only EC2	S3 Allow	Allow
+S3 Allow	Only EC2	Allow
+S3 Allow	S3 Denied	Denied
+S3 Denied	S3 Allow	Denied
+
+Explcit Deny > Explicit Allow > Implicit Deny
+
+
